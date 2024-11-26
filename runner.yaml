@@ -1,0 +1,10 @@
+inputs:
+  - name: awskeyid
+    prompt: Access Key ID To Account ID Number
+    type: text
+
+launch:
+  program: app.py
+  args:
+    - '--awskeyid'
+    - '${awskeyid}'

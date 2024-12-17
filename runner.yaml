@@ -1,10 +1,12 @@
-inputs:
+runner:
+  name: Access Key ID To Account ID
+  description: This tool converts AWS Access Key IDs to their corresponding AWS Account IDs by decoding the embedded account information within the key. It provides both a command-line interface and a function that can validate AWS Key IDs and extract the account number using base32 decoding.
+  version: 0.0.2
+
+webform:
   - name: awskeyid
     prompt: Access Key ID To Account ID Number
     type: text
 
 launch:
-  program: app.py
-  args:
-    - '--awskeyid'
-    - '${awskeyid}'
+  command: app.py --awskeyid ${awskeyid}
